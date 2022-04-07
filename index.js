@@ -1,7 +1,4 @@
 const client = require('./twitterClient')
+const {getFollowers} = require('./twitterController')
 
-// const tweet = async()=>{
-//     await client.v2.tweet('newest twitter bot')
-// }
-
-// tweet()
+getFollowers();
