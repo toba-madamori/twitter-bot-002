@@ -1,4 +1,6 @@
 const client = require('./twitterClient')
-const {getFollowers} = require('./twitterController')
+const {getFollowers, getProfileImageUrl} = require('./twitterController')
 
-getFollowers();
+const generateBanner = async()=>{
+    const followers = await getFollowers()
+}
