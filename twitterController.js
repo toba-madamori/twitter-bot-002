@@ -11,7 +11,15 @@ const getProfileImageUrl = async(user_id)=>{
     return profile_image_url
 }
 
+const updateBanner = async()=>{
+    await client.v1.updateAccountProfileBanner('./final.png', {
+        width:1500,
+        height:500
+    })
+}
+
 module.exports = {
     getFollowers,
-    getProfileImageUrl
+    getProfileImageUrl,
+    updateBanner
 }
