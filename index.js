@@ -1,5 +1,5 @@
 const client = require('./twitterClient')
-const {getFollowers, getProfileImageUrl} = require('./twitterController')
+const {getFollowers, getProfileImageUrl, updateBanner} = require('./twitterController')
 const { saveImage, createBanner } = require('./imageController')
 
 const generateBanner = async()=>{
@@ -10,6 +10,7 @@ const generateBanner = async()=>{
         await saveImage(follower.id, url)
     }
     await createBanner()
+    await updateBanner()
 }
 
 generateBanner();
